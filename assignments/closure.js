@@ -1,6 +1,23 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function world() {
+  let worldName = 'Earth';
+  console.log(worldName);
+
+  function country() {
+    let countryName = 'USA';
+    console.log(countryName);
+
+    function state() {
+      let stateName = 'Utah';
+      console.log(stateName);
+    }
+    state();
+  }
+  country()
+}
+world()
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
