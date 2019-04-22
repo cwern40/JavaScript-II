@@ -87,7 +87,7 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1 Runners that donated more than 200 dollars will have their names written on plaque. Find a list of the runners that donated more than 200
+// Problem 1: Runners that donated more than 200 dollars will have their names written on plaque. Find a list of the runners that donated more than 200
 
 let plaque = runners.filter(function(large) {
     if(large.donation >= 200) {
@@ -97,6 +97,17 @@ let plaque = runners.filter(function(large) {
 
 console.log(plaque);
 
-// Problem 2
+// Problem 2: The run will be televised in mexico so the donation total amount needs to be converted to pesos
 
-// Problem 3
+let mexicoPeso = runners.reduce(function(accumulator, pesos) {
+    return accumulator + pesos.donation * 19
+}, 0);
+console.log(mexicoPeso);
+
+// Problem 3: 
+
+let runnerPeso = [];
+runners.forEach(function(names) {
+    runnerPeso.push(`${names.first_name} ${names.last_name} ${names.donation * 19}`);
+})
+console.log(runnerPeso);
